@@ -1,0 +1,59 @@
+---
+import Container from '../ui/Container.astro';
+
+const items = [
+    'Rollen en toegangsrechten',
+    'Tweefactorauthenticatie',
+    'Logging en controleerbaarheid',
+    'Versleutelde communicatie',
+    'Beveiligde back-ups',
+    'Hosting binnen Europa',
+];
+---
+
+<section id="veiligheid" class="bg-brand-50/60 py-20 sm:py-24 lg:py-28">
+    <Container>
+        <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
+            <div>
+                <span class="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">
+                    Veiligheid & privacy
+                </span>
+
+                <h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.035em] text-navy-950 sm:text-4xl lg:text-5xl">
+                    Zorgdata vraagt om zorgvuldigheid
+                </h2>
+
+                <p class="mt-6 text-lg leading-8 text-navy-600">
+                    Binnen MyCocoon wordt gewerkt met persoonsgegevens en medische informatie.
+                    Bescherming daarvan is daarom geen losse functie, maar onderdeel van de manier
+                    waarop het platform is ontworpen en beheerd.
+                </p>
+
+                <p class="mt-4 text-lg leading-8 text-navy-600">
+                    Gebruikers krijgen toegang op basis van hun rol en verantwoordelijkheden.
+                    Gebeurtenissen worden vastgelegd en gevoelige gegevens worden beschermd tijdens
+                    opslag en uitwisseling.
+                </p>
+
+                <p class="mt-4 text-lg leading-8 text-navy-600">
+                    De processen rondom MyCocoon worden ingericht met aandacht voor onder andere AVG
+                    en NEN 7510.
+                </p>
+            </div>
+
+            <div class="rounded-3xl border border-brand-100 bg-white p-7 shadow-sm sm:p-9">
+                <div class="grid gap-4 sm:grid-cols-2">
+                    {items.map((item) => (
+                        <div class="flex items-start gap-3 rounded-xl bg-navy-50/60 p-4">
+                            <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                                ✓
+                            </div>
+
+                            <span class="font-medium leading-6 text-navy-800">{item}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </Container>
+</section>

@@ -1,0 +1,86 @@
+---
+import Container from '../ui/Container.astro';
+
+const integrations = [
+    {
+        name: 'Babyconnect',
+        description:
+            'Voor digitale gegevensuitwisseling tussen zorgverleners binnen de geboortezorg.',
+    },
+    {
+        name: 'FHIR',
+        description:
+            'Ondersteuning voor gestandaardiseerde en veilige uitwisseling van zorginformatie.',
+    },
+    {
+        name: 'VECOZO',
+        description: 'Voor declaratieprocessen en gegevensuitwisseling met zorgverzekeraars.',
+    },
+    {
+        name: 'Microsoft 365',
+        description:
+            'Voor samenwerking, authenticatie, communicatie en geïntegreerde werkprocessen.',
+    },
+    {
+        name: 'Exact',
+        description: 'Voor aansluiting tussen de zorgadministratie en financiële administratie.',
+    },
+];
+---
+
+<section id="koppelingen" class="bg-white py-20 sm:py-24 lg:py-28">
+    <Container>
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+                <span class="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">
+                    Koppelingen & gegevensuitwisseling
+                </span>
+
+                <h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.035em] text-navy-950 sm:text-4xl lg:text-5xl">
+                    MyCocoon staat niet op zichzelf
+                </h2>
+
+                <p class="mt-6 text-lg leading-8 text-navy-600">
+                    Een kraamzorgorganisatie werkt met verschillende organisaties, systemen en
+                    informatiestromen. Daarom is gegevensuitwisseling een essentieel onderdeel van
+                    MyCocoon.
+                </p>
+
+                <p class="mt-4 text-lg leading-8 text-navy-600">
+                    Waar mogelijk koppelen we processen rechtstreeks aan elkaar. Zo hoeft informatie
+                    niet handmatig van het ene systeem naar het andere te worden overgenomen.
+                </p>
+            </div>
+
+            <div class="grid gap-4">
+                {integrations.map((integration) => (
+                    <div class="rounded-2xl border border-navy-100 bg-navy-50/40 p-6">
+                        <div class="flex gap-5">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 font-heading font-bold text-brand-700">
+                                {integration.name.charAt(0)}
+                            </div>
+
+                            <div>
+                                <h3 class="font-heading text-lg font-bold text-navy-900">
+                                    {integration.name}
+                                </h3>
+
+                                <p class="mt-2 leading-7 text-navy-600">
+                                    {integration.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div class="mt-12 rounded-2xl border border-brand-100 bg-brand-50 px-7 py-6">
+            <p class="leading-7 text-navy-700">
+                <strong class="text-navy-900">Een andere koppeling nodig?</strong>
+                MyCocoon is ontworpen om mee te bewegen met de systemen en infrastructuur waarmee
+                kraamzorgorganisaties werken.
+            </p>
+        </div>
+    </Container>
+</section>

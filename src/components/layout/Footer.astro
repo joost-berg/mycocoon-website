@@ -1,0 +1,70 @@
+---
+import Container from '../ui/Container.astro';
+---
+
+<footer class="border-t border-navy-100 bg-white">
+    <Container class="py-12">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div class="lg:col-span-2">
+                <a href="/" class="font-heading text-xl font-bold tracking-[-0.03em] text-navy-900">
+                    MyCocoon
+                </a>
+
+                <p class="mt-4 max-w-md leading-7 text-navy-600">
+                    Het complete softwareplatform voor kraamzorgorganisaties. Van planning en
+                    zorgdossier tot declaraties en gegevensuitwisseling.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="font-heading text-sm font-bold uppercase tracking-wide text-navy-900">
+                    MyCocoon
+                </h2>
+
+                <nav class="mt-4 flex flex-col gap-3">
+                    <a href="#platform" class="text-sm text-navy-600 hover:text-brand-600">
+                        Platform
+                    </a>
+                    <a href="#voor-wie" class="text-sm text-navy-600 hover:text-brand-600">
+                        Voor wie
+                    </a>
+                    <a href="#koppelingen" class="text-sm text-navy-600 hover:text-brand-600">
+                        Koppelingen
+                    </a>
+                    <a href="#veiligheid" class="text-sm text-navy-600 hover:text-brand-600">
+                        Veiligheid
+                    </a>
+                </nav>
+            </div>
+
+            <div>
+                <h2 class="font-heading text-sm font-bold uppercase tracking-wide text-navy-900">
+                    Contact
+                </h2>
+
+                <nav class="mt-4 flex flex-col gap-3">
+                    <a
+                        href="mailto:info@mycocoon.nl"
+                        class="text-sm text-navy-600 hover:text-brand-600"
+                    >
+                        info@mycocoon.nl
+                    </a>
+
+                    <a href="/privacy" class="text-sm text-navy-600 hover:text-brand-600">
+                        Privacy
+                    </a>
+
+                    <a href="/voorwaarden" class="text-sm text-navy-600 hover:text-brand-600">
+                        Voorwaarden
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-3 border-t border-navy-100 pt-6 text-sm text-navy-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} MyCocoon B.V. Alle rechten voorbehouden.</p>
+
+            <p>Software voor moderne kraamzorg.</p>
+        </div>
+    </Container>
+</footer>

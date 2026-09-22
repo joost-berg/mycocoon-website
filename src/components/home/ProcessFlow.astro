@@ -1,0 +1,63 @@
+---
+import Container from '../ui/Container.astro';
+
+const steps = [
+    { label: 'Aanmelding', number: '01' },
+    { label: 'Intake', number: '02' },
+    { label: 'Planning', number: '03' },
+    { label: 'Zorg', number: '04' },
+    { label: 'Registratie', number: '05' },
+    { label: 'Declaratie', number: '06' },
+];
+---
+
+<section class="bg-brand-50/70 py-20 sm:py-24 lg:py-28">
+    <Container>
+        <div class="mx-auto max-w-3xl text-center">
+            <span class="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">
+                Eén doorlopend proces
+            </span>
+
+            <h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.035em] text-navy-950 sm:text-4xl lg:text-5xl">
+                Van aanmelding tot declaratie
+            </h2>
+
+            <p class="mt-5 text-lg leading-8 text-navy-600">
+                Informatie die eenmaal is vastgelegd, blijft beschikbaar waar die nodig is. Zo
+                werken planning, zorg en administratie vanuit dezelfde actuele werkelijkheid.
+            </p>
+        </div>
+
+        <div class="mt-16">
+            <div class="grid gap-6 md:grid-cols-3 xl:grid-cols-6">
+                {steps.map((step, index) => (
+                    <div class="relative">
+                        <div class="flex h-full flex-col items-center rounded-2xl border border-brand-100 bg-white px-5 py-7 text-center shadow-sm">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 font-heading text-sm font-bold text-brand-700">
+                                {step.number}
+                            </div>
+
+                            <h3 class="mt-4 font-heading text-lg font-bold text-navy-900">
+                                {step.label}
+                            </h3>
+                        </div>
+
+                        {index < steps.length - 1 && (
+                            <div
+                                class="absolute top-1/2 -right-4 hidden -translate-y-1/2 text-brand-300 xl:block"
+                                aria-hidden="true"
+                            >
+                                →
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div class="mx-auto mt-10 max-w-4xl rounded-2xl border border-brand-100 bg-white/80 px-6 py-5 text-center text-navy-700 backdrop-blur">
+            Minder dubbele invoer. Minder overdrachtsmomenten. Meer overzicht in de hele
+            organisatie.
+        </div>
+    </Container>
+</section>

@@ -1,0 +1,70 @@
+---
+import Container from '../ui/Container.astro';
+
+const audiences = [
+    {
+        title: 'Voor planners',
+        text: 'Direct overzicht in cliënten, medewerkers, beschikbaarheid en capaciteit. Zodat je snel kunt plannen en bijsturen.',
+        href: '#voor-planners',
+    },
+    {
+        title: 'Voor kraamprofessionals',
+        text: 'Alle informatie die je nodig hebt voor goede zorg en duidelijke registratie, overzichtelijk bij elkaar.',
+        href: '#voor-kraamprofessionals',
+    },
+    {
+        title: 'Voor administratie',
+        text: 'Minder handmatige controles en een helder proces rondom tarieven, declaraties en financiële verwerking.',
+        href: '#voor-administratie',
+    },
+    {
+        title: 'Voor management',
+        text: 'Actueel inzicht in de organisatie, zodat beslissingen gebaseerd zijn op wat er daadwerkelijk gebeurt.',
+        href: '#voor-management',
+    },
+];
+---
+
+<section id="voor-wie" class="bg-white py-20 sm:py-24 lg:py-28">
+    <Container>
+        <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div class="lg:sticky lg:top-28">
+                <span class="text-sm font-semibold uppercase tracking-[0.14em] text-brand-600">
+                    Voor iedereen in de organisatie
+                </span>
+
+                <h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.035em] text-navy-950 sm:text-4xl lg:text-5xl">
+                    Gemaakt voor de mensen die ermee werken
+                </h2>
+
+                <p class="mt-6 max-w-xl text-lg leading-8 text-navy-600">
+                    Iedereen heeft een andere rol. Daarom sluit MyCocoon aan op wat iemand nodig
+                    heeft, zonder iedereen met dezelfde informatie te overladen.
+                </p>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+                {audiences.map((audience, index) => (
+                    <a
+                        href={audience.href}
+                        class="group flex min-h-[260px] flex-col rounded-2xl border border-navy-100 bg-navy-50/40 p-7 transition duration-200 hover:-translate-y-1 hover:border-brand-200 hover:bg-brand-50/60 hover:shadow-lg"
+                    >
+                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-600 shadow-sm">
+                            {String(index + 1).padStart(2, '0')}
+                        </div>
+
+                        <h3 class="mt-8 font-heading text-2xl font-bold tracking-[-0.025em] text-navy-900">
+                            {audience.title}
+                        </h3>
+
+                        <p class="mt-4 leading-7 text-navy-600">{audience.text}</p>
+
+                        <div class="mt-auto pt-8 text-sm font-semibold text-brand-600 transition group-hover:translate-x-1">
+                            Meer ontdekken →
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </Container>
+</section>

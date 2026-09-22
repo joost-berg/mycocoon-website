@@ -1,0 +1,52 @@
+---
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+---
+
+<section id="demo" class="bg-white py-20 sm:py-24 lg:py-28">
+    <Container>
+        <div class="relative overflow-hidden rounded-3xl bg-brand-600 px-6 py-14 text-center text-white sm:px-12 sm:py-16 lg:px-20 lg:py-20">
+            <div
+                class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-navy-950/20 blur-3xl"
+                aria-hidden="true"
+            ></div>
+
+            <div class="relative mx-auto max-w-3xl">
+                <span class="text-sm font-semibold uppercase tracking-[0.14em] text-brand-100">
+                    Kennismaken
+                </span>
+
+                <h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.035em] sm:text-4xl lg:text-5xl">
+                    Benieuwd hoe MyCocoon binnen jullie organisatie werkt?
+                </h2>
+
+                <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-brand-50">
+                    We laten MyCocoon graag zien aan de hand van jullie eigen werkprocessen. Van
+                    aanmelding en planning tot zorg, administratie en gegevensuitwisseling.
+                </p>
+
+                <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <Button
+                        href="/contact"
+                        class="bg-white text-brand-700 hover:bg-brand-50"
+                        variant="light"
+                    >
+                        Plan een demo
+                    </Button>
+
+                    <a
+                        href="mailto:info@mycocoon.nl"
+                        class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                    >
+                        Neem contact op
+                    </a>
+                </div>
+            </div>
+        </div>
+    </Container>
+</section>

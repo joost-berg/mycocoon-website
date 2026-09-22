@@ -1,0 +1,57 @@
+---
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+---
+
+<section class="relative isolate overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0 -z-20 overflow-hidden">
+        <img
+            src="/images/hero/hero-placeholder.jpg"
+            alt=""
+            class="h-full w-full scale-110 object-cover"
+            style="object-position: 80% center;"
+            loading="eager"
+        />
+    </div>
+
+    <div
+        class="absolute inset-0 -z-10
+           bg-linear-to-r
+           from-white
+           via-white/85
+           via-45%
+           to-transparent
+           to-72%"
+    ></div>
+
+    <Container class="flex min-h-[680px] items-center py-20 lg:min-h-[760px] lg:py-28">
+        <div class="max-w-3xl">
+            <div class="mb-5 inline-flex items-center rounded-full border border-brand-200 bg-white/80 px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm backdrop-blur">
+                Software voor moderne kraamzorg
+            </div>
+
+            <h1 class="font-heading max-w-3xl text-5xl font-bold leading-[1.03] tracking-[-0.045em] text-navy-950 sm:text-6xl lg:text-7xl">
+                Alles voor je kraamzorgorganisatie in{' '}
+                <span class="text-brand-600">één platform.</span>
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-navy-700 sm:text-xl">
+                Van aanmelding en planning tot zorgdossier, declaratie en gegevensuitwisseling.
+                MyCocoon brengt het hele proces samen in één moderne werkomgeving.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Button href="#demo">Plan een demo</Button>
+
+                <Button href="#platform" variant="secondary">
+                    Ontdek MyCocoon
+                </Button>
+            </div>
+
+            <p class="mt-6 text-sm font-medium text-navy-600">
+                Voor kraamzorgorganisaties, planners, zorgprofessionals en administratie.
+            </p>
+        </div>
+    </Container>
+</section>
