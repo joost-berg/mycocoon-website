@@ -8,6 +8,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+// Only the GitHub Pages preview disables indexing.
+// Production builds must leave GITHUB_PAGES unset; verify robots tags at launch.
+const isPreview = process.env.GITHUB_PAGES === 'true';
 ---
 
 <!doctype html>
@@ -17,6 +21,8 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width" />
 
         <title>{title}</title>
+
+        {isPreview && <meta name="robots" content="noindex, nofollow" />}
 
         <meta
             name="description"
