@@ -8,11 +8,12 @@ import Button from '../ui/Button.astro';
     <!-- Background image -->
     <div class="absolute inset-0 -z-20 overflow-hidden">
         <img
-            src={withBase('/images/hero/hero-placeholder.jpg')}
+            src={withBase('/images/hero/hero-care-preview.webp')}
             alt=""
-            class="h-full w-full scale-110 object-cover"
+            class="h-full w-full object-cover"
             style="object-position: 80% center;"
             loading="eager"
+            fetchpriority="high"
         />
     </div>
 
@@ -23,7 +24,11 @@ import Button from '../ui/Button.astro';
            via-white/85
            via-45%
            to-transparent
-           to-72%"
+           to-72%
+           lg:from-white/95
+           lg:via-white/70
+           lg:via-35%
+           lg:to-65%"
     ></div>
 
     <Container class="flex min-h-[680px] items-center py-20 lg:min-h-[760px] lg:py-28">
