@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../utils/withBase';
 import Container from '../ui/Container.astro';
 ---
 
@@ -6,7 +7,7 @@ import Container from '../ui/Container.astro';
     <Container class="py-12">
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div class="lg:col-span-2">
-                <a href="/" class="font-heading text-xl font-bold tracking-[-0.03em] text-navy-900">
+                <a href={withBase('/')} class="font-heading text-xl font-bold tracking-[-0.03em] text-navy-900">
                     MyCocoon
                 </a>
 
@@ -50,11 +51,11 @@ import Container from '../ui/Container.astro';
                         info@mycocoon.nl
                     </a>
 
-                    <a href="/privacy" class="text-sm text-navy-600 hover:text-brand-600">
+                    <a href={withBase('/privacy')} class="text-sm text-navy-600 hover:text-brand-600">
                         Privacy
                     </a>
 
-                    <a href="/voorwaarden" class="text-sm text-navy-600 hover:text-brand-600">
+                    <a href={withBase('/voorwaarden')} class="text-sm text-navy-600 hover:text-brand-600">
                         Voorwaarden
                     </a>
                 </nav>

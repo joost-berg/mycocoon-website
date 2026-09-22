@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../utils/withBase';
 import Container from '../ui/Container.astro';
 import Button from '../ui/Button.astro';
 
@@ -14,7 +15,7 @@ const navigation = [
 <header class="border-b border-navy-100 bg-white/95 backdrop-blur">
     <Container class="flex h-20 items-center justify-between">
         <a
-            href="/"
+            href={withBase('/')}
             class="font-heading text-xl font-bold tracking-[-0.03em] text-navy-900"
             aria-label="MyCocoon home"
         >
